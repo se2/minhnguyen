@@ -20,9 +20,9 @@ if ( ! function_exists( 'ttg_wp_setup' ) ) :
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 * If you're building a theme based on ttg-wp-theme, use a find and replace
-		 * to change 'ttg-wp' to the name of your theme in all the template files.
+		 * to change 'minhnguyen' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'ttg-wp', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'minhnguyen', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -44,7 +44,9 @@ if ( ! function_exists( 'ttg_wp_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'ttg-wp' ),
+			'menu-primary' => esc_html__( 'Primary', 'minhnguyen' ),
+			'menu-left'    => esc_html__( 'Menu Left', 'minhnguyen' ),
+			'menu-right'   => esc_html__( 'Menu Right', 'minhnguyen' ),
 		) );
 
 		/*

@@ -20,3 +20,12 @@ require get_template_directory() . '/lib/enqueue-styles-scripts.php';
 require get_template_directory() . '/lib/template-tags.php';
 require get_template_directory() . '/lib/template-functions.php';
 
+// Project CPT
+require get_template_directory() . '/lib/register-project-cpt.php';
+
+// ACF Options Page
+require get_template_directory() . '/lib/acf-options-page.php';
+
+// Helper Functions
+require get_template_directory() . '/lib/helpers.php';
+

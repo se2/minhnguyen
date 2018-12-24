@@ -15,16 +15,16 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'ttg-wp' ) ); ?>">
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'minhnguyen' ) ); ?>">
 				<?php
 				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'ttg-wp' ), 'WordPress' );
+				printf( esc_html__( 'Proudly powered by %s', 'minhnguyen' ), 'WordPress' );
 				?>
 			</a>
 			<span class="sep"> | </span>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'ttg-wp' ), 'ttg-wp', '<a href="http://technologytherapy">ttg</a>' );
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'minhnguyen' ), 'minhnguyen', '<a href="http://maplestudio.vn">ttg</a>' );
 				?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

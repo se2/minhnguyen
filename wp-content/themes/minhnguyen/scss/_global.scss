@@ -1,0 +1,19 @@
+html,
+body {
+	@apply .font-display font-normal;
+}
+
+.button-shadow {
+  box-shadow: 0 6 18px 0 black;
+}
+
+ul.menu {
+  @apply .list-reset;
+}
+
+.container {
+  @apply .relative w-full;
+  margin: 0 auto;
+  max-width: 1110px;
+}
+
