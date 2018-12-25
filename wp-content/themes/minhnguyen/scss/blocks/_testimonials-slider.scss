@@ -1,18 +1,16 @@
 .page-block--testimonials {
-  padding-top: 30px;
-  padding-bottom: 60px;
+  @apply pt-30 pb-60;
   .block-title {
-    line-height: 1.333333;
-    margin-bottom: 10px;
+    @apply mb-10;
     @screen md {
       margin-bottom: 32px;
     }
-	}
-	.container {
-		@apply px-0;
-	}
+  }
+  .container {
+    @apply px-0;
+  }
   @screen lg {
-    padding-top: 60px;
+    @apply pt-60;
     padding-bottom: 105px;
   }
 }
@@ -20,15 +18,15 @@
 .testimonials-slider {
   @apply .mx-auto;
   .slide {
-    @apply .bg-white .outline-none .opacity-0 .invisible;
-    margin: 24px 20px;
+    @apply .bg-white .outline-none .opacity-0 .invisible mx-20;
+    margin-top: 24px;
+    margin-bottom: 24px;
     transition: all 500ms ease-in-out;
     min-height: 357px;
     border-radius: 10px;
     box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.1);
     @screen md {
-      margin-left: 40px;
-      margin-right: 40px;
+      @apply mx-40;
     }
     @screen xl {
       margin-left: 110px;
@@ -54,9 +52,6 @@
         background: #d8d8d8;
         width: 12px;
         height: 12px;
-        &::before {
-          content: none;
-        }
       }
       &.slick-active {
         button {
@@ -81,7 +76,7 @@
     @apply p-20;
     border-radius: 10px 10px 0 0;
     @screen lg {
-      padding: 40px 60px;
+      @apply py-40 px-60;
       border-radius: 10px 0 0 10px;
     }
     .quote-mark {

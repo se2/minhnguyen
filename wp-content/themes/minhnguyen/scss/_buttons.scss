@@ -7,6 +7,9 @@
 	border: 2px solid;
 	@apply .border-primary;
 	transition: all 400ms ease;
+	&.font-normal {
+		@apply .font-normal;
+	}
 	@screen lg {
 		&:hover {
 			@apply .text-primary .bg-white;

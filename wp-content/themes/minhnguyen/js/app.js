@@ -35,8 +35,34 @@
           arrows: false,
           autoplaySpeed: 8000,
           fade: true,
-					cssEase: "ease",
-					adaptiveHeight: true,
+          cssEase: "ease",
+          adaptiveHeight: true
+        });
+      }
+    });
+    // Center-mode slider
+    $(".center-slider").each(function() {
+      if (!$(this).hasClass("slick-initialized")) {
+        $(this).slick({
+          autoplay: true,
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+          arrows: false,
+          autoplaySpeed: 8000,
+          centerMode: true,
+          variableWidth: true,
+          responsive: [
+            {
+              breakpoint: 767,
+              settings: {
+								slidesToShow: 1,
+								centerMode: false,
+								variableWidth: false,
+              }
+            }
+          ]
         });
       }
     });

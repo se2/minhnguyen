@@ -47,9 +47,6 @@
 					width: 13px;
 					height: 13px;
 				}
-				&:before {
-					content: none;
-				}
 				@screen lg {
 					&:hover {
 						@apply .bg-white;

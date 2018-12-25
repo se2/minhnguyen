@@ -4,12 +4,12 @@ body {
 }
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 p {
-	@apply .font-display text-base .font-normal;
-	line-height: 1.5;
+  @apply .font-display text-base .font-normal;
+  line-height: 1.5;
 }
 
 .button-shadow {
@@ -17,11 +17,11 @@ p {
 }
 
 a {
-	@apply .no-underline;
-	transition: color 400ms;
-	&:hover {
-		@apply .text-primary;
-	}
+  @apply .no-underline;
+  transition: color 400ms;
+  &:hover {
+    @apply .text-primary;
+  }
 }
 
 ul.menu {
@@ -31,16 +31,38 @@ ul.menu {
 .container {
   @apply .relative w-full px-20;
   margin: 0 auto;
-	max-width: 1140px;
-	@screen xl {
+  max-width: 1140px;
+  @screen xl {
     @apply .px-0;
   }
   &--wide {
-		@apply px-20;
-		max-width: 1350px;
-		@media screen and (min-width: 1351px) {
-			padding-left: 48px;
-			padding-right: 48px;
-		}
+    @apply px-20;
+    max-width: 1350px;
+    @media screen and (min-width: 1351px) {
+      padding-left: 48px;
+      padding-right: 48px;
+    }
+  }
+}
+
+.page-block {
+  .block-title {
+    line-height: 1.333333;
+  }
+  .block-subtitle {
+    color: #7f7f7f;
+    line-height: 1.43;
+  }
+}
+
+.slick-dots {
+  li {
+		@apply .w-auto .h-auto;
+    button {
+			@apply p-0 .rounded-full;
+      &::before {
+        content: none;
+      }
+    }
   }
 }
