@@ -28,7 +28,7 @@ $slides = get_sub_field( 'slides' );
 		<?php foreach ( $slides as $key => $slide ) : ?>
 		<div class="slide bg-cover bg-center bg-no-repeat outline-none" style="background-image:url(<?php echo esc_url( $slide['slide_image'] ); ?>);">
 			<div class="flex items-end w-full h-full">
-				<a href="<?php echo esc_url( $slide['slide_link'] ); ?>">
+				<a href="<?php echo esc_url( $slide['slide_link']['url'] ); ?>">
 					<h3 class="text-white text-2xl px-30 py-20 leading-normal w-full lg:w-2/3 relative z-50 opacity-0"><?php echo esc_html( $slide['slide_title'] ); ?></h3>
 				</a>
 			</div>
