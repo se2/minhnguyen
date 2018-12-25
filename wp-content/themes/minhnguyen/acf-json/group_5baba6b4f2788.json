@@ -388,6 +388,94 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5c21d35a6d5b1": {
+                    "key": "layout_5c21d35a6d5b1",
+                    "name": "testimonials-slider",
+                    "label": "Testimonials Slider",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5c21d35a6d5b2",
+                            "label": "Visible?",
+                            "name": "visible",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "25",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 1,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_5c21d35a6d5b3",
+                            "label": "Admin Title",
+                            "name": "layout_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "75",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5c21d3cae190f",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5c21d36d6d5b5",
+                            "label": "Limit",
+                            "name": "limit",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": 4,
+                            "placeholder": "Number of showing testimonials",
+                            "prepend": "",
+                            "append": "",
+                            "min": 1,
+                            "max": 10,
+                            "step": 1
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Content Block",
@@ -425,5 +513,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1545709544
+    "modified": 1545720789
 }

@@ -1,0 +1,93 @@
+.page-block--testimonials {
+  padding-top: 30px;
+  padding-bottom: 60px;
+  @screen lg {
+    padding-top: 60px;
+    padding-bottom: 120px;
+  }
+  .block-title {
+    line-height: 1.333333;
+    margin-bottom: 30px;
+    @screen lg {
+      margin-bottom: 32px;
+    }
+  }
+}
+
+.testimonials-slider {
+  @apply .mx-auto;
+  .slide {
+    @apply .bg-white .outline-none .opacity-0 .invisible;
+    margin: 24px 110px;
+    transition: all 500ms ease-in-out;
+    min-height: 357px;
+    border-radius: 10px;
+    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.1);
+    &.slick-active {
+      @apply .opacity-100 .visible;
+    }
+    hr {
+      height: 2px;
+      background: #f7f7f7;
+      margin-top: 18px;
+      margin-bottom: 24px;
+    }
+  }
+  .slick-dots {
+    li {
+      @apply .w-auto .h-auto;
+      margin: 0 15px;
+      button {
+        @apply p-0 .rounded-full;
+        background: #d8d8d8;
+        width: 12px;
+        height: 12px;
+        &::before {
+          content: none;
+        }
+      }
+      &.slick-active {
+        button {
+          background: #595959;
+        }
+      }
+    }
+  }
+  .avatar,
+  .play {
+    width: 64px;
+    height: 64px;
+  }
+  .avatar {
+    margin-right: 12px;
+  }
+  .test-title,
+  .test-subtitle {
+    line-height: 1.1875;
+  }
+  .test-subtitle {
+    color: #7f7f7f;
+  }
+  .test-info {
+    @apply p-20;
+    border-radius: 10px 0 0 10px;
+    @screen lg {
+      padding: 40px 60px;
+    }
+    .quote-mark {
+      width: 40px;
+    }
+  }
+  .test-media {
+    @apply .relative;
+    border-radius: 0 10px 10px 0;
+    min-height: 357px;
+    &::before {
+      @apply .bg-black .absolute .w-full .h-full .opacity-50;
+      border-radius: 0 10px 10px 0;
+      content: "";
+      left: 0;
+      top: 0;
+    }
+  }
+}

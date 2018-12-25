@@ -9,6 +9,7 @@ body {
 
 p {
 	@apply .font-display text-base .font-normal;
+	line-height: 1.5;
 }
 
 .button-shadow {
