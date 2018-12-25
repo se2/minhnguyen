@@ -1,0 +1,19 @@
+.page-block--icons {
+	padding-top: 60px;
+	padding-bottom: 30px;
+	.block-subtitle {
+		line-height: 1.712;
+	}
+	.icon-image {
+		height: 76px;
+	}
+	hr {
+		@apply .bg-primary mt-5 mb-10;
+		width: 30px;
+		height: 1px;
+	}
+	@screen lg {
+		padding-top: 120px;
+		padding-bottom: 60px;
+	}
+}

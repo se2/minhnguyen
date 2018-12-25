@@ -15,7 +15,7 @@ $slides = get_sub_field( 'slides' );
 	<div class="container">
 		<div class="w-full flex flex-wrap justify-between mb-60 items-center">
 			<div class="w-full lg:w-3/5">
-				<h2 class="block-title text-4xl md:text-5xl uppercase tracking-wide"><?php the_sub_field( 'title' ); ?></h2>
+				<h2 class="block-title text-4xl md:text-5xl uppercase tracking-wide mb-10"><?php the_sub_field( 'title' ); ?></h2>
 				<p class="block-subtitle text-sm"><?php the_sub_field( 'subtitle' ); ?></p>
 			</div>
 			<div class="w-full lg:w-2/5 text-center lg:text-right mt-30 lg:mt-0">
