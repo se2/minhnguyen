@@ -119,16 +119,22 @@ ul.menu {
 
 $offcanvas: 250px;
 
+#page {
+	@apply .overflow-x-hidden;
+}
+
 #site-canvas {
   -webkit-transform: translateZ(0) translateX(0);
   transform: translateZ(0) translateX(0);
   transition: all 400ms ease-in-out;
   -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  &.show-offcanvas {
-    -webkit-transform: translateZ(0) translateX(-#{$offcanvas});
-    transform: translateZ(0) translateX(-#{$offcanvas});
-  }
+	backface-visibility: hidden;
+	@media screen and (max-width: 992px) {
+		&.show-offcanvas {
+			-webkit-transform: translateZ(0) translateX(-#{$offcanvas});
+			transform: translateZ(0) translateX(-#{$offcanvas});
+		}
+	}
 }
 
 #mobile-menu {

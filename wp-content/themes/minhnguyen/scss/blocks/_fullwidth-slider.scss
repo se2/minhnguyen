@@ -1,6 +1,11 @@
 .fullwidth-slider {
+	@apply .overflow-hidden .invisible .opacity-0;
+	transition: all 500ms ease;
 	&.slick-slider {
 		@apply mb-0;
+	}
+	&.slick-initialized {
+		@apply .visible .opacity-100;
 	}
 	.slide {
 		@apply .relative;
