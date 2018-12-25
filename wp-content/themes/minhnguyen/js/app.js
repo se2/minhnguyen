@@ -35,7 +35,8 @@
           arrows: false,
           autoplaySpeed: 8000,
           fade: true,
-          cssEase: "ease",
+					cssEase: "ease",
+					adaptiveHeight: true,
         });
       }
     });

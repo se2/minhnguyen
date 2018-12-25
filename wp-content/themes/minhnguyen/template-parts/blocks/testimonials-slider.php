@@ -12,6 +12,8 @@ $bg   = 'background-color:' . get_sub_field( 'background' ) . ';';
 $args = array(
 	'post_type'      => 'testimonial',
 	'posts_per_page' => get_sub_field( 'limit' ),
+	'orderby'        => 'date',
+	'order'          => 'DESC',
 );
 $testimonials = get_posts( $args );
 ?>
@@ -31,7 +33,7 @@ $testimonials = get_posts( $args );
 			<div class="slide">
 				<div class="flex flex-wrap">
 					<div class="w-full lg:w-1/2 test-info">
-						<div class="flex flex-wrap items-center">
+						<div class="flex items-center">
 							<div class="avatar bg-cover bg-center bg-no-repeat" style="background-image:url(<?php echo esc_url( $avatar ); ?>);"></div>
 							<div class="test-heading">
 								<p class="test-title text-primary font-bold text-base"><?php echo esc_html( $t->post_title ); ?></p>
@@ -39,11 +41,11 @@ $testimonials = get_posts( $args );
 							</div>
 						</div>
 						<hr class="w-full">
-						<div class="flex flex-wrap items-start">
-							<div class="w-1/6">
-								<img src="<?php echo get_template_directory_uri(); ?>/images/quote.png" alt="quote" class="quote-mark">
+						<div class="flex flex-wrap items-start justify-between lg:justify-center">
+							<div class="quote-mark">
+								<img src="<?php echo get_template_directory_uri(); ?>/images/quote.png" alt="quote">
 							</div>
-							<div class="w-5/6">
+							<div class="quote-content">
 								<p><?php echo $t->post_content; ?></p>
 							</div>
 						</div>

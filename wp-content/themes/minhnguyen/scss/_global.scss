@@ -29,14 +29,14 @@ ul.menu {
 }
 
 .container {
-  @apply .relative w-full px-10;
+  @apply .relative w-full px-20;
   margin: 0 auto;
 	max-width: 1140px;
 	@screen xl {
     @apply .px-0;
   }
   &--wide {
-		@apply px-10;
+		@apply px-20;
 		max-width: 1350px;
 		@media screen and (min-width: 1351px) {
 			padding-left: 48px;

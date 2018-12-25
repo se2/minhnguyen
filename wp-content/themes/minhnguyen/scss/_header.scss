@@ -20,12 +20,19 @@
     }
     .socials-list {
       li a {
-        border: 2px solid #fff;
+        border: 1px solid #fff;
         @screen lg {
           &:hover {
             @apply .border-primary .text-primary;
           }
         }
+      }
+    }
+  }
+  &.w-full .socials-list {
+    li a {
+      @media screen and (min-width: 414px) {
+        border-width: 2px;
       }
     }
   }
@@ -107,9 +114,15 @@ ul.menu {
       margin-right: 13px;
     }
     a {
+			@apply text-xs;
       transition: all 400ms;
-      width: 32px;
-      height: 32px;
+      width: 24px;
+			height: 24px;
+			@media screen and (min-width: 414px) {
+				@apply text-base;
+				width: 32px;
+				height: 32px;
+			}
     }
     &::last-child {
       margin-right: 0;

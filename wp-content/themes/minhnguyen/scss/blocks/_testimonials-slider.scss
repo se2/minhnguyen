@@ -1,16 +1,19 @@
 .page-block--testimonials {
   padding-top: 30px;
   padding-bottom: 60px;
-  @screen lg {
-    padding-top: 60px;
-    padding-bottom: 120px;
-  }
   .block-title {
     line-height: 1.333333;
-    margin-bottom: 30px;
-    @screen lg {
+    margin-bottom: 10px;
+    @screen md {
       margin-bottom: 32px;
     }
+	}
+	.container {
+		@apply px-0;
+	}
+  @screen lg {
+    padding-top: 60px;
+    padding-bottom: 105px;
   }
 }
 
@@ -18,11 +21,19 @@
   @apply .mx-auto;
   .slide {
     @apply .bg-white .outline-none .opacity-0 .invisible;
-    margin: 24px 110px;
+    margin: 24px 20px;
     transition: all 500ms ease-in-out;
     min-height: 357px;
     border-radius: 10px;
     box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.1);
+    @screen md {
+      margin-left: 40px;
+      margin-right: 40px;
+    }
+    @screen xl {
+      margin-left: 110px;
+      margin-right: 110px;
+    }
     &.slick-active {
       @apply .opacity-100 .visible;
     }
@@ -34,6 +45,7 @@
     }
   }
   .slick-dots {
+    bottom: -13px;
     li {
       @apply .w-auto .h-auto;
       margin: 0 15px;
@@ -53,13 +65,10 @@
       }
     }
   }
-  .avatar,
-  .play {
-    width: 64px;
-    height: 64px;
-  }
   .avatar {
     margin-right: 12px;
+    width: 64px;
+    height: 64px;
   }
   .test-title,
   .test-subtitle {
@@ -70,24 +79,50 @@
   }
   .test-info {
     @apply p-20;
-    border-radius: 10px 0 0 10px;
+    border-radius: 10px 10px 0 0;
     @screen lg {
       padding: 40px 60px;
+      border-radius: 10px 0 0 10px;
     }
     .quote-mark {
-      width: 40px;
+      margin-right: 8px;
+      img {
+        width: 20px;
+        @screen md {
+          width: 40px;
+        }
+      }
+    }
+    .quote-content {
+      width: calc(100% - 28px);
+      @screen md {
+        width: calc(100% - 48px);
+      }
     }
   }
   .test-media {
     @apply .relative;
-    border-radius: 0 10px 10px 0;
-    min-height: 357px;
+    border-radius: 0 0 10px 10px;
+    min-height: 200px;
     &::before {
       @apply .bg-black .absolute .w-full .h-full .opacity-50;
-      border-radius: 0 10px 10px 0;
+      border-radius: 0 0 10px 10px;
       content: "";
       left: 0;
       top: 0;
+    }
+    .play {
+      width: 64px;
+      height: 64px;
+    }
+    @screen md {
+      min-height: 357px;
+    }
+    @screen lg {
+      border-radius: 0 10px 10px 0;
+      &::before {
+        border-radius: 0 10px 10px 0;
+      }
     }
   }
 }
