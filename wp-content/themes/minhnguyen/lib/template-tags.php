@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package ttg-wp-theme
+ * @package maple-studio
  */
 
 if ( ! function_exists( 'ttg_wp_posted_on' ) ) :

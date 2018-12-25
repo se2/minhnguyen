@@ -20,8 +20,9 @@ require get_template_directory() . '/lib/enqueue-styles-scripts.php';
 require get_template_directory() . '/lib/template-tags.php';
 require get_template_directory() . '/lib/template-functions.php';
 
-// Project CPT
+// Custom Post Types
 require get_template_directory() . '/lib/register-project-cpt.php';
+require get_template_directory() . '/lib/register-work-cpt.php';
 
 // ACF Options Page
 require get_template_directory() . '/lib/acf-options-page.php';

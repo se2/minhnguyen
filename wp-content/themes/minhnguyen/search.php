@@ -4,52 +4,44 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
- * @package ttg-wp-theme
+ * @package maple-studio
  */
 
 get_header();
 ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main">
-
-		<?php if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php
-					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'minhnguyen' ), '<span>' . get_search_query() . '</span>' );
-					?>
-				</h1>
-			</header><!-- .page-header -->
-
+	<div class="w-full bg-grey-light overflow-auto mb-60">
+		<h1 class="blog-title uppercase text-primary tracking-wide text-center text-4xl leading-none">
 			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+			/* translators: %s: search query. */
+			printf( esc_html__( 'Search Results for: %s', 'ttg-wp' ), '<span>' . get_search_query() . '</span>' );
+			?>
+		</h1>
+	</div>
 
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
-		</main><!-- #main -->
-	</section><!-- #primary -->
+	<!-- Blog main loop -->
+	<div class="container flex flex-wrap px-20 2xl:px-0 main-loop">
+		<div id="primary" class="content-area">
+			<main id="main" class="site-main">
+			<?php
+			if ( have_posts() ) :
+				while ( have_posts() ) :
+					the_post();
+					get_template_part( 'template-parts/content', 'loop' );
+				endwhile;
+				// Posts pagination
+				if ( function_exists( 'custom_pagination' ) ) {
+					custom_pagination();
+				} else {
+					the_posts_navigation();
+				}
+			else :
+				get_template_part( 'template-parts/content', 'none' );
+			endif;
+			?>
+			</main><!-- #main -->
+		</div><!-- #primary -->
+	</div>
 
 <?php
-get_sidebar();
 get_footer();

@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package ttg-wp-theme
+ * @package maple-studio
  */
 
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {

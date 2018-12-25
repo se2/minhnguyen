@@ -1,10 +1,26 @@
 html,
 body {
-	@apply .font-display font-normal;
+  @apply .font-display font-normal;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+p {
+	@apply .font-display text-base .font-normal;
 }
 
 .button-shadow {
   box-shadow: 0 6 18px 0 black;
+}
+
+a {
+	@apply .no-underline;
+	transition: color 400ms;
+	&:hover {
+		@apply .text-primary;
+	}
 }
 
 ul.menu {
@@ -12,8 +28,18 @@ ul.menu {
 }
 
 .container {
-  @apply .relative w-full;
+  @apply .relative w-full px-10;
   margin: 0 auto;
-  max-width: 1110px;
+	max-width: 1140px;
+	@screen xl {
+    @apply .px-0;
+  }
+  &--wide {
+		@apply px-10;
+		max-width: 1350px;
+		@media screen and (min-width: 1351px) {
+			padding-left: 48px;
+			padding-right: 48px;
+		}
+  }
 }
-

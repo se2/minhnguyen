@@ -57,11 +57,11 @@ function project_cpt() {
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'rewrite'               => array(
-			'slug'       => 'cong-trinh',
+			'slug'       => 'du-an',
 			'with_front' => true
 		),
 		'capability_type'       => 'page',
-		'menu_icon'             => 'dashicons-portfolio',
+		'menu_icon'             => 'dashicons-format-image',
 	);
 	register_post_type( 'project', $args );
 

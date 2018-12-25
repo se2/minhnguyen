@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package ttg-wp-theme
+ * @package maple-studio
  */
 
 ?>
@@ -28,38 +28,88 @@
 </head>
 
 <body <?php body_class(); ?>>
+
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'minhnguyen' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$ttg_wp_description = get_bloginfo( 'description', 'display' );
-			if ( $ttg_wp_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $ttg_wp_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+	<div id="site-canvas" class="relative w-full h-full">
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'minhnguyen' ); ?></button>
+		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'minhnguyen' ); ?></a>
+
+		<div class="offcanvas-menu block lg:hidden" id="mobile-menu">
 			<?php
 			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
+				'theme_location' => 'menu-left',
+				'menu_id'        => 'primary-left',
+				'container'      => false,
+			) );
+			wp_nav_menu( array(
+				'theme_location' => 'menu-right',
+				'menu_id'        => 'primary-right',
+				'container'      => false,
 			) );
 			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+		</div>
 
-	<div id="content" class="site-content">
+		<header id="masthead" class="site-header w-full <?php echo is_front_page() ? 'absolute bg-transparent' : 'bg-white'; ?>">
+
+			<div class="wrapper container container--wide flex flex-wrap items-center justify-between h-full">
+
+				<div class="site-socials">
+					<?php
+					$socials = get_field( 'social_accounts', 'option' );
+					if ( $socials ) :
+					?>
+					<ul class="socials-list list-reset">
+						<?php foreach ( $socials as $key => $social ) : ?>
+						<li class="social inline-block">
+							<a target="_blank" href="<?php echo esc_url( $social['social_url'] ); ?>" class="block rounded-full flex items-center justify-center">
+								<i class="<?php echo esc_attr( $social['social_service'] ); ?>"></i>
+							</a>
+						</li>
+						<?php endforeach; ?>
+					</ul>
+					<?php endif; ?>
+				</div>
+
+				<div class="center-nav flex flex-wrap items-center justify-center">
+
+					<nav id="left-navigation" class="left-navigation hidden lg:block">
+						<?php
+						wp_nav_menu( array(
+							'theme_location' => 'menu-left',
+							'menu_id'        => 'primary-left',
+						) );
+						?>
+					</nav><!-- #site-navigation -->
+
+					<div class="site-branding">
+						<?php $logo = is_front_page() ? get_field( 'white_logo', 'option' ) : get_field( 'dark_logo', 'option' ); ?>
+						<a href="<?php the_clean_url(); ?>">
+							<img src="<?php echo esc_url( $logo ); ?>" alt="<?php bloginfo( 'name' ); ?>" class="site-logo">
+						</a>
+					</div>
+
+					<nav id="right-navigation" class="right-navigation hidden lg:block">
+						<?php
+						wp_nav_menu( array(
+							'theme_location' => 'menu-right',
+							'menu_id'        => 'primary-right',
+						) );
+						?>
+					</nav><!-- #site-navigation -->
+
+				</div>
+
+				<div class="toggle-button text-right">
+					<button class="hamburger hamburger--collapse outline-none" type="button">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</button>
+				</div>
+
+			</div>
+
+		</header><!-- #masthead -->
+
+		<div id="content" class="site-content">

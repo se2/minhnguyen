@@ -7,7 +7,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package ttg-wp-theme
+ * @package maple-studio
  */
 
 /*

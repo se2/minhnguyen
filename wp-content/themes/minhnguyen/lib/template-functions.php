@@ -2,7 +2,7 @@
 /**
  * Functions which enhance the theme by hooking into WordPress
  *
- * @package ttg-wp-theme
+ * @package maple-studio
  */
 
 /**
@@ -35,3 +35,37 @@ function ttg_wp_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'ttg_wp_pingback_header' );
+
+/**
+ * Friendly Block Titles
+ *
+ * @link http://serversideguy.com/2017/03/28/how-can-i-create-custom-titles-for-advanced-custom-fields-flexible-content-blocks/
+ */
+function my_layout_title( $title, $field, $layout, $i ) {
+	if ( $value = get_sub_field( 'layout_title' ) ) {
+		return $value;
+	} else {
+		foreach ( $layout['sub_fields'] as $sub ) {
+			if ( $sub['name'] == 'layout_title' ) {
+				$key = $sub['key'];
+				if ( is_array( $field['value'] ) && array_key_exists( $i, $field['value']) && $value = $field['value'][$i][$key] )
+					return $value;
+			}
+		}
+	}
+	return $title;
+}
+
+/**
+ * Remove 'Archives' and 'Category' strings in archive pages
+ */
+add_filter( 'get_the_archive_title', function ( $title ) {
+	if ( is_category() ) {
+		$title = single_cat_title( '', false );
+	} elseif ( is_tag() ) {
+		$title = single_tag_title( '', false );
+	} elseif ( is_post_type_archive( array( 'work', 'post', 'project' ) ) ) {
+		$title = post_type_archive_title( '', false );
+	}
+	return $title;
+});

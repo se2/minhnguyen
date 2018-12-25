@@ -10,7 +10,27 @@
   margin-top: 0; // single-direction margins only. @see: https://bit.ly/2LGJ2mr
 }
 
+// Libraries
+$hamburger-layer-color: white;
+$hamburger-layer-width: 27px;
+$hamburger-layer-height: 3px;
+$hamburger-layer-border-radius: 0;
+$hamburger-padding-x: 0;
+$hamburger-padding-y: 0;
+
+@import 'hamburgers/hamburgers.scss';
+
 // Global
 @import 'global';
 @import 'wp';
-@import 'buttons'
+@import 'buttons';
+
+// Components
+@import 'header';
+@import 'footer';
+
+// Templates
+@import 'front';
+
+// Blocks
+@import 'blocks/fullwidth-slider';
