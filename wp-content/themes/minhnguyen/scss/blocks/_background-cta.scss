@@ -1,0 +1,16 @@
+.page-block--bg-cta {
+	padding: 60px 0;
+	@screen lg {
+		padding: 120px 0;
+	}
+	.block-subtitle {
+		color: #f5f5f5;
+		line-height: 32px;
+	}
+	.block-title {
+		@apply .mx-auto;
+		line-height: 52px;
+		margin-bottom: 32px;
+		max-width: 700px;
+	}
+}

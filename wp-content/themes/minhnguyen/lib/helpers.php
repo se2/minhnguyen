@@ -23,10 +23,8 @@ function the_clean_url() {
  * @param String $class CTA button's classes.
  */
 function the_cta( $link, $class = 'button' ) {
-	$link_str = '';
-	$page_id  = url_to_postid( $link['url'] );
 	if ( $link ) {
-		$link_str = '<a data-page="' . $page_id . '" class="' . $class . '" href="' . $link['url'] . '" target="' . $link['target'] . '">' . $link['title'] . '</a>';
+		$link_str = '<a class="' . $class . '" href="' . $link['url'] . '" target="' . $link['target'] . '">' . $link['title'] . '</a>';
 	}
 	echo $link_str;
 }
