@@ -71,3 +71,14 @@ add_filter( 'get_the_archive_title', function ( $title ) {
 	}
 	return $title;
 });
+
+/**
+ * Return 6 posts per page for Work
+ */
+function set_posts_per_page_for_work_cpt( $query ) {
+	if ( !is_admin() && $query->is_main_query() && is_post_type_archive( 'work' ) ) {
+		$query->set( 'posts_per_page', '6' );
+	}
+}
+
+add_action( 'pre_get_posts', 'set_posts_per_page_for_work_cpt' );

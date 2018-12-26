@@ -7,21 +7,19 @@
  * @package maple-studio
  */
 
+// 57.1627260083 411 / 719
+// 56.9444444444
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'flex flex-wrap loop-row items-center' ); ?>>
-	<?php $thumb = get_the_post_thumbnail_url( $post, 'medium' ); ?>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'flex flex-wrap loop-row items-center relative' ); ?>>
+	<?php $thumb = get_the_post_thumbnail_url( $post, 'large' ); ?>
 	<div class="post-loop-thumbnail w-full bg-cover bg-center bg-no-repeat" style="background-image:url(<?php echo esc_url( $thumb ); ?>);">
-		<a href="<?php the_permalink(); ?>" class="block w-full h-full"></a>
 	</div>
-	<div class="post-loop-content w-full text-left">
-		<span class="date font-bold text-sm block text-black tracking-wide"><?php the_time( 'n.j.Y' ); ?></span>
-		<a class="no-underline" href="<?php the_permalink(); ?>"><h2 class="uppercase text-secondary tracking-wide title"><?php the_title(); ?></h2></a>
-		<?php if ( get_field( 'post_author' ) ) : ?>
-		<span class="posted-by capitalize">
-			<span class="byline"> by <span class="author vcard"><a class="url fn n pointer-events-none cursor-default" href="#!"><?php the_field( 'post_author' ); ?></a></span></span>
-		</span>
-		<?php endif; ?>
-		<a href="<?php echo esc_url( get_permalink() ); ?>" class="button border uppercase font-bold">Read</a>
-	</div>
+	<a href="<?php the_permalink(); ?>" class="block w-full h-full absolute flex flex-wrap items-center justify-center post-link">
+		<div class="w-full">
+			<h2 class="text-center uppercase text-primary tracking-wide title text-lg leading-tighter"><?php the_title(); ?></h2>
+			<span class="date text-center font-normal text-12px block text-white tracking-wide leading-tighter"><?php the_time( 'F j, Y' ); ?></span>
+		</div>
+	</a>
 </article><!-- #post-<?php the_ID(); ?> -->
+

@@ -1,5 +1,5 @@
 .button {
-	@apply .bg-primary .font-bold .text-white .text-center .text-lg .rounded-full .tracking-wide;
+	@apply .bg-primary .font-bold .text-white .text-center .text-lg .rounded-full .tracking-wide .inline-block;
 	line-height: 21px;
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 	padding: 19px 0;
@@ -9,6 +9,12 @@
 	transition: all 400ms ease;
 	&.font-normal {
 		@apply .font-normal;
+	}
+	&.block {
+		@apply block;
+	}
+	&.inline {
+		@apply .inline;
 	}
 	@screen lg {
 		&:hover {

@@ -1,0 +1,60 @@
+.main-loop {
+	&.work {
+		padding-top: 40px;
+		padding-bottom: 60px;
+		@screen lg {
+			padding-top: 70px;
+			padding-bottom: 80px;
+		}
+		.loop-row {
+			@apply w-full;
+			@screen md {
+				@apply w-1/2;
+			}
+		}
+	}
+	.post-link {
+		transition: opacity 500ms ease;
+		background-color: rgba($color: #000000, $alpha: .5);
+		@screen xl {
+			@apply .opacity-0;
+		}
+	}
+	.loop-row {
+		@apply .overflow-hidden;
+		@screen xl {
+			&:hover {
+				.post-loop-thumbnail {
+					transition: transform 500ms ease;
+					transform: scale3d(1.1, 1.1, 1);
+				}
+				.post-link {
+					@apply .opacity-100;
+				}
+			}
+		}
+	}
+}
+
+.post-loop-thumbnail {
+	@apply w-full;
+	transition: transform 500ms ease;
+	transform: scale3d(1, 1, 1);
+	height: 0;
+	padding-bottom: 57.1627260083%;
+}
+
+.pagination {
+	@apply my-40 block mx-auto w-full;
+	li {
+		@apply .inline-block;
+		margin: 0 4px;
+		width: 32px;
+		height: 32px;
+		border: 1px solid #000;
+		line-height: 32px;
+		a {
+			@apply .text-primary;
+		}
+	}
+}

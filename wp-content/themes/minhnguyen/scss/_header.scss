@@ -8,12 +8,20 @@
     a {
       @apply text-white;
     }
-    ul.menu li a {
-      @screen lg {
-        &:hover {
-          @apply .text-primary;
+    ul.menu li {
+      &.current-menu-item {
+        a {
           &:before {
-            @apply .bg-white;
+            @apply bg-white;
+          }
+        }
+      }
+      a {
+        @screen lg {
+          &:hover {
+            &:before {
+              @apply .bg-white;
+            }
           }
         }
       }
@@ -27,6 +35,34 @@
           }
         }
       }
+    }
+  }
+  &.bg-white {
+    a {
+      @apply text-black;
+    }
+    ul.menu li {
+      &.current-menu-item {
+        a {
+          &:before {
+            @apply bg-black;
+          }
+        }
+      }
+      a {
+        @screen lg {
+          &:hover {
+            &:before {
+              @apply .bg-black;
+            }
+          }
+        }
+      }
+    }
+    .hamburger-inner,
+    .hamburger-inner::before,
+    .hamburger-inner::after {
+      @apply .bg-black;
     }
   }
   &.w-full .socials-list {
@@ -114,15 +150,15 @@ ul.menu {
       margin-right: 13px;
     }
     a {
-			@apply text-xs;
+      @apply text-xs;
       transition: all 400ms;
       width: 24px;
-			height: 24px;
-			@media screen and (min-width: 414px) {
-				@apply text-base;
-				width: 32px;
-				height: 32px;
-			}
+      height: 24px;
+      @media screen and (min-width: 414px) {
+        @apply text-base;
+        width: 32px;
+        height: 32px;
+      }
     }
     &::last-child {
       margin-right: 0;

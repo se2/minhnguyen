@@ -16,6 +16,9 @@
 		@screen xl {
 			height: 690px;
 		}
+		@screen 2xl {
+			height: 47.9166666667vw;
+		}
 		&:before {
 			content: "";
 			@apply .absolute w-full h-full;

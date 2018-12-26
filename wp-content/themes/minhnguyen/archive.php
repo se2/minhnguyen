@@ -10,16 +10,18 @@
 get_header();
 ?>
 
-	<div class="w-full bg-grey-light overflow-auto mb-60">
+	<?php if ( !is_post_type_archive( array( 'work' ) ) ) : ?>
+	<div class="w-full overflow-auto">
 		<h1 class="blog-title uppercase text-primary tracking-wide text-center text-4xl leading-none">
 			<?php the_archive_title(); ?>
 		</h1>
 	</div>
+	<?php endif; ?>
 
 	<!-- Blog main loop -->
-	<div class="container flex flex-wrap px-20 2xl:px-0 main-loop">
-		<div id="primary" class="content-area">
-			<main id="main" class="site-main">
+	<div class="main-loop <?php echo get_post_type(); ?>">
+		<div id="primary" class="content-area w-full <?php echo !is_post_type_archive( array( 'work' ) ) ? 'container' : ''; ?>">
+			<main id="main" class="site-main w-full flex flex-wrap">
 			<?php
 			if ( have_posts() ) :
 				while ( have_posts() ) :
