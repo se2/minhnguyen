@@ -4,22 +4,22 @@
     @apply .py-60;
   }
   .center-slider {
-		@apply .opacity-0 .invisible;
-		transition: opacity 400ms;
-		&.slick-initialized {
-			@apply .visible .opacity-100;
-		}
-		h3 {
-			transition: opacity 400ms ease;
-		}
+    @apply .opacity-0 .invisible;
+    transition: opacity 400ms;
+    &.slick-initialized {
+      @apply .visible .opacity-100;
+    }
+    h3 {
+      transition: opacity 400ms ease;
+    }
     .slide {
       @apply .relative w-full;
-			height: 300px;
-			@screen md {
-				margin: 0 25px;
-				width: 555px;
-				height: 346px;
-			}
+      height: 300px;
+      @screen md {
+        margin: 0 25px;
+        width: 555px;
+        height: 346px;
+      }
       &:after {
         content: "";
         @apply .absolute w-full;
@@ -31,41 +31,46 @@
           rgba(0, 0, 0, 0) 0%,
           #000000 100%
         );
-			}
-			&.slick-active {
-				h3 {
-					@apply .opacity-100;
-				}
-			}
+      }
+      &.slick-active {
+        h3 {
+          @apply .opacity-100;
+        }
+      }
     }
     .slick-dots {
-			bottom: -40px;
-			left: 0;
-      li {
-				margin: 0 12.5px;
+      bottom: -40px;
+      left: 0;
+    }
+  }
+}
+.testimonials-slider,
+.center-slider {
+  .slick-dots {
+    li {
+      margin: 0 12.5px;
+      button {
+        @apply .relative;
+        width: 10px;
+        height: 10px;
+        background: #7f7f7f;
+        &:before {
+          @apply .absolute .rounded-full;
+          content: "";
+          width: 16px;
+          height: 16px;
+          border: 1px solid transparent;
+          left: -3px;
+          top: -3px;
+        }
+      }
+      &.slick-active {
         button {
-					@apply .relative;
-					width: 10px;
-					height: 10px;
-					background: #7F7F7F;
-					&:before {
-						@apply .absolute .rounded-full;
-						content: "";
-						width: 16px;
-						height: 16px;
-						border: 1px solid transparent;
-						left: -3px;
-						top: -3px;
-					}
-				}
-				&.slick-active {
-					button {
-						@apply .bg-primary;
-						&:before {
-							@apply .border-primary;
-						}
-					}
-				}
+          @apply .bg-primary;
+          &:before {
+            @apply .border-primary;
+          }
+        }
       }
     }
   }

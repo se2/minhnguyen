@@ -4,27 +4,29 @@
   @screen lg {
     height: 164px;
   }
+  ul.menu li {
+    &.current-menu-item {
+      a {
+        @apply .text-primary;
+        &:before {
+          @apply bg-primary;
+        }
+      }
+    }
+    a {
+      @screen lg {
+        &:hover {
+          @apply .text-primary;
+          &:before {
+            @apply .bg-primary;
+          }
+        }
+      }
+    }
+  }
   &.bg-transparent {
     a {
       @apply text-white;
-    }
-    ul.menu li {
-      &.current-menu-item {
-        a {
-          &:before {
-            @apply bg-white;
-          }
-        }
-      }
-      a {
-        @screen lg {
-          &:hover {
-            &:before {
-              @apply .bg-white;
-            }
-          }
-        }
-      }
     }
     .socials-list {
       li a {
@@ -40,24 +42,6 @@
   &.bg-white {
     a {
       @apply text-black;
-    }
-    ul.menu li {
-      &.current-menu-item {
-        a {
-          &:before {
-            @apply bg-black;
-          }
-        }
-      }
-      a {
-        @screen lg {
-          &:hover {
-            &:before {
-              @apply .bg-black;
-            }
-          }
-        }
-      }
     }
     .hamburger-inner,
     .hamburger-inner::before,
