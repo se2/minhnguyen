@@ -1,0 +1,37 @@
+.post-single {
+	@apply pb-60;
+	@screen lg {
+		padding-bottom: 120px;
+	}
+}
+.post-featured {
+	height: 555px;
+}
+
+.post-content {
+	@apply .mb-40;
+	@screen lg {
+		@apply mb-80;
+		padding-right: 5%;
+	}
+	p {
+		@apply text-sm text-grey;
+		line-height: 1.712;
+	}
+}
+
+.post-info {
+	.metadata {
+		img {
+			width: 20px;
+			margin-right: 15px;
+		}
+		> div {
+			border-bottom: 1px solid #E3E3E3;
+			width: calc(100% - 35px);
+			p:first-of-type {
+				margin-bottom: 6px;
+			}
+		}
+	}
+}

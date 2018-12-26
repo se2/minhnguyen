@@ -32,8 +32,9 @@ $hamburger-padding-y: 0;
 // Templates
 @import 'front';
 
-// Archive
+// Blog
 @import 'archive';
+@import 'single';
 
 // Blocks
 @import 'blocks/fullwidth-slider';

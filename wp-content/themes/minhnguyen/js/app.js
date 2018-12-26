@@ -1,6 +1,13 @@
 // JQuery's Document Ready Function
 ($ => {
   $(document).ready(function() {
+    // Init smoothscroll for internal links
+    var scroll = new SmoothScroll('a[href*="#"]', {
+      speed: 500,
+      speedAsDuration: true,
+      easing: "easeInOutCubic",
+      updateURL: false
+    });
     // Hamburger menu toggle
     $(".toggle-button .hamburger").click(function() {
       $(this).toggleClass("is-active");
@@ -57,9 +64,9 @@
             {
               breakpoint: 767,
               settings: {
-								slidesToShow: 1,
-								centerMode: false,
-								variableWidth: false,
+                slidesToShow: 1,
+                centerMode: false,
+                variableWidth: false
               }
             }
           ]

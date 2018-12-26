@@ -191,7 +191,8 @@ module.exports = {
 
   leading: {
     0: 0,
-    none: 1,
+		none: 1,
+		tiny: 1.15,
     tighter: 1.25,
     tight: 1.4,
     normal: 1.5,
