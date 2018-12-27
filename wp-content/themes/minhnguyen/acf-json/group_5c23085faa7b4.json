@@ -1,6 +1,6 @@
 {
     "key": "group_5c23085faa7b4",
-    "title": "Work",
+    "title": "Details",
     "fields": [
         {
             "key": "field_5c2308f6690db",
@@ -162,6 +162,13 @@
                 "operator": "==",
                 "value": "work"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "project"
+            }
         ]
     ],
     "menu_order": 0,
@@ -172,5 +179,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1545867361
+    "modified": 1545868993
 }

@@ -8,9 +8,11 @@
  */
 
 get_header();
+
+$post_types = array( 'work', 'project' );
 ?>
 
-	<?php if ( !is_post_type_archive( array( 'work' ) ) ) : ?>
+	<?php if ( !is_post_type_archive( $post_types ) ) : ?>
 	<div class="w-full overflow-auto">
 		<h1 class="blog-title uppercase text-primary tracking-wide text-center text-4xl leading-none">
 			<?php the_archive_title(); ?>
@@ -20,7 +22,7 @@ get_header();
 
 	<!-- Blog main loop -->
 	<div class="main-loop <?php echo get_post_type(); ?>">
-		<div id="primary" class="content-area w-full <?php echo !is_post_type_archive( array( 'work' ) ) ? 'container' : ''; ?>">
+		<div id="primary" class="content-area w-full <?php echo !is_post_type_archive( $post_types ) ? 'container' : ''; ?>">
 			<main id="main" class="site-main w-full flex flex-wrap">
 			<?php
 			if ( have_posts() ) :

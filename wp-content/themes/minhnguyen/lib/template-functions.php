@@ -76,7 +76,7 @@ add_filter( 'get_the_archive_title', function ( $title ) {
  * Return 6 posts per page for Work
  */
 function set_posts_per_page_for_work_cpt( $query ) {
-	if ( !is_admin() && $query->is_main_query() && is_post_type_archive( 'work' ) ) {
+	if ( !is_admin() && $query->is_main_query() && is_post_type_archive( array( 'work', 'project' ) ) ) {
 		$query->set( 'posts_per_page', '6' );
 	}
 }
