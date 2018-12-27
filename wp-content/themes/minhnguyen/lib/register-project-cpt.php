@@ -74,7 +74,7 @@ function project_cpt() {
 			'label'        => 'Project Categories',
 			'query_var'    => true,
 			'rewrite'      => array(
-				'slug'       => '/', // This controls the base slug that will display before each term
+				'slug'       => '/phan-loai-du-an', // This controls the base slug that will display before each term
 				'with_front' => false // Don't display the category base before
 			)
 		)

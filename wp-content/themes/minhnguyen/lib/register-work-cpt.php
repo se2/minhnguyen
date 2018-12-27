@@ -74,7 +74,7 @@ function work_cpt() {
 			'label'        => 'Work Categories',
 			'query_var'    => true,
 			'rewrite'      => array(
-				'slug'       => '/', // This controls the base slug that will display before each term
+				'slug'       => '/hang-muc-cong-trinh', // This controls the base slug that will display before each term
 				'with_front' => false // Don't display the category base before
 			)
 		)
