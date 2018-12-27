@@ -31,11 +31,6 @@
     .socials-list {
       li a {
         border: 1px solid #fff;
-        @screen lg {
-          &:hover {
-            @apply .border-primary .text-primary;
-          }
-        }
       }
     }
   }
@@ -51,6 +46,11 @@
   }
   &.w-full .socials-list {
     li a {
+      @screen lg {
+        &:hover {
+          @apply .border-primary .text-primary;
+        }
+      }
       @media screen and (min-width: 414px) {
         border-width: 2px;
       }

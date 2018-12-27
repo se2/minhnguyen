@@ -46,16 +46,28 @@
 }
 
 .pagination {
-	@apply my-40 block mx-auto w-full;
+	@apply mt-50 block mx-auto w-full mb-40;
 	li {
 		@apply .inline-block;
 		margin: 0 4px;
+	}
+	span,
+	a {
+		@apply block;
 		width: 32px;
 		height: 32px;
 		border: 1px solid #000;
 		line-height: 32px;
-		a {
-			@apply .text-primary;
+		@screen lg {
+			&:hover {
+				@apply .text-primary;
+			}
 		}
+	}
+	span {
+		@apply .border-primary .text-primary;
+	}
+	a {
+		@apply .text-black .border-transparent;
 	}
 }

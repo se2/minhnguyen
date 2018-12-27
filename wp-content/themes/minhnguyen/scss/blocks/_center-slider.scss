@@ -22,7 +22,8 @@
       }
       &:after {
         content: "";
-        @apply .absolute w-full;
+				@apply .absolute w-full .opacity-0;
+				transition: opacity 400ms;
         height: 138px;
         bottom: 0;
         left: 0;
@@ -33,6 +34,7 @@
         );
       }
       &.slick-active {
+				&:after,
         h3 {
           @apply .opacity-100;
         }

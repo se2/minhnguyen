@@ -21,7 +21,7 @@ $icons = get_sub_field( 'icons' );
 		<div class="w-full flex flex-wrap icons-group">
 			<?php foreach ( $icons as $key => $icon ) : ?>
 			<div class="icon-group w-1/2 md:w-1/4 text-center mb-40 md:mb-0">
-				<div class="w-full icon-image">
+				<div class="w-full icon-image flex justify-center items-center">
 					<img src="<?php echo esc_url( $icon['icon'] ); ?>" alt="<?php echo esc_url( $icon['description'] ); ?>">
 				</div>
 				<p class="icon-figure text-lg text-black leading-normal"><?php echo $icon['figure'] ?></p>
