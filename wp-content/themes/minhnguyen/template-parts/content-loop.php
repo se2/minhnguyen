@@ -12,6 +12,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'flex flex-wrap loop-row items-center relative' ); ?>>
 	<?php $thumb = get_the_post_thumbnail_url( $post, 'large' ); ?>
 	<div class="post-loop-thumbnail w-full bg-cover bg-center bg-no-repeat" style="background-image:url(<?php echo esc_url( $thumb ); ?>);">
+		<a href="<?php the_permalink(); ?>" class="hidden"></a>
 	</div>
 	<a href="<?php the_permalink(); ?>" class="block w-full h-full absolute flex flex-wrap items-center justify-center post-link">
 		<div class="w-full">

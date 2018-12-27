@@ -42,6 +42,11 @@
     .hamburger-inner::before,
     .hamburger-inner::after {
       @apply .bg-black;
+		}
+		.socials-list {
+      li a {
+        border: 1px solid black;
+      }
     }
   }
   &.w-full .socials-list {
