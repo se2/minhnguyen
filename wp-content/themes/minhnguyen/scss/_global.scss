@@ -66,3 +66,12 @@ ul.menu {
     }
   }
 }
+
+.dark-overlay {
+	@apply .relative;
+	&::before {
+		content: "";
+		@apply .absolute .w-full .h-full z-10;
+		background-color: rgba(0, 0, 0, .5);
+	}
+}

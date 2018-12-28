@@ -11,7 +11,7 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area single-<?php echo get_post_type(); ?>">
 		<main id="main" class="site-main">
 
 		<?php

@@ -101,7 +101,7 @@
 				</div>
 
 				<div class="toggle-button text-right">
-					<button class="hamburger hamburger--collapse outline-none" type="button">
+					<button class="hamburger hamburger--collapse outline-none inline-block lg:hidden" type="button">
 						<span class="hamburger-box">
 							<span class="hamburger-inner"></span>
 						</span>

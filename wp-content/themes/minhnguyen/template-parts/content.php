@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying posts
+ * Template part for displaying single Work and Project
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -12,16 +12,16 @@ $featured = get_the_post_thumbnail_url( $post, 'full' );
 $images   = get_field( 'work_gallery' );
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'post-single' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<div class="post-featured bg-cover bg-center bg-no-repeat w-full mb-40 lg:mb-80" style="background-image:url(<?php echo esc_url( $featured ); ?>);"></div>
 
 	<div class="container">
 		<div class="w-full flex flex-wrap-reverse lg:flex-wrap">
-			<div class="post-content w-full <?php echo get_field( 'visible_info' ) ? 'lg:w-1/2' : ''; ?> text-justify">
+			<div class="post-excerpt w-full <?php echo get_field( 'visible_info' ) ? 'lg:w-1/2 lg:pr-70' : ''; ?> text-justify">
 				<?php
 				the_title( '<h1 class="entry-title text-2xl mb-30 leading-tighter">', '</h1>' );
-				the_content();
+				the_excerpt();
 				?>
 			</div>
 			<?php if ( get_field( 'visible_info' ) ) : ?>
@@ -65,6 +65,10 @@ $images   = get_field( 'work_gallery' );
 				</div>
 			</div>
 			<?php endif; ?>
+		</div>
+
+		<div class="w-full post-content">
+			<?php the_content(); ?>
 		</div>
 
 		<?php if ( $images ) : ?>
