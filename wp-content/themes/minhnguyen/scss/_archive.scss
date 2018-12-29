@@ -1,121 +1,128 @@
 .main-loop {
-	padding-top: 40px;
-	padding-bottom: 60px;
-	@screen lg {
-		padding-top: 70px;
-		padding-bottom: 120px;
-	}
-	&.project,
-	&.work {
-		.loop-row {
-			@apply w-full;
-			@screen md {
-				@apply w-1/2;
-			}
-		}
-	}
-	.post-link {
-		transition: opacity 500ms ease;
-		background-color: rgba($color: #000000, $alpha: .5);
-		@screen ipad {
-			@apply .opacity-0;
-		}
-	}
-	.loop-row {
-		@apply .overflow-hidden;
-		@screen ipad {
-			&:hover {
-				.post-loop-thumbnail {
-					transition: transform 500ms ease;
-					transform: scale3d(1.1, 1.1, 1);
-				}
-				.post-link {
-					@apply .opacity-100;
-				}
-			}
-		}
-	}
+  padding-top: 40px;
+  padding-bottom: 60px;
+  @screen lg {
+    padding-top: 70px;
+    padding-bottom: 120px;
+  }
+  &.project,
+  &.work {
+    .site-main {
+      @apply .justify-between;
+    }
+    .loop-row {
+      @apply w-full;
+      margin-bottom: 14px;
+      min-height: 218px;
+      height: calc(57.1627260083vw / 2);
+      @screen md {
+        width: calc(50% - 7px);
+      }
+    }
+  }
+  .post-link {
+    @apply .mx-auto w-full;
+    transition: opacity 500ms ease;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    @screen ipad {
+      @apply .opacity-0;
+    }
+  }
+  .loop-row {
+    @apply .overflow-hidden;
+    @screen ipad {
+      &:hover {
+        .post-loop-thumbnail {
+          transition: transform 500ms ease;
+          transform: scale3d(1.1, 1.1, 1);
+        }
+        .post-link {
+          @apply .opacity-100;
+        }
+      }
+    }
+  }
 }
 
 .post-loop-thumbnail {
-	@apply w-full;
-	transition: transform 500ms ease;
-	transform: scale3d(1, 1, 1);
-	height: 0;
-	padding-bottom: 57.1627260083%;
+  @apply w-full .absolute h-full;
+  top: 0;
+  left: 0;
+  transition: transform 500ms ease;
+  transform: scale3d(1, 1, 1);
 }
 
 .pagination {
-	@apply mt-50 block mx-auto w-full;
-	li {
-		@apply .inline-block;
-		margin: 0 4px;
-	}
-	span,
-	a {
-		@apply block;
-		width: 32px;
-		height: 32px;
-		border: 1px solid #000;
-		line-height: 32px;
-		@screen lg {
-			&:hover {
-				@apply .text-primary;
-			}
-		}
-	}
-	span {
-		@apply .border-primary .text-primary;
-	}
-	a {
-		@apply .text-black .border-transparent;
-	}
+  @apply mt-50 block mx-auto w-full;
+  li {
+    @apply .inline-block;
+    margin: 0 4px;
+  }
+  span,
+  a {
+    @apply block;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #000;
+    line-height: 32px;
+    @screen lg {
+      &:hover {
+        @apply .text-primary;
+      }
+    }
+  }
+  span {
+    @apply .border-primary .text-primary;
+  }
+  a {
+    @apply .text-black .border-transparent;
+  }
 }
 
 // Blog styling
 .main-loop.post {
-	max-width: 1170px;
-	.loop-row {
-		@apply w-full block;
-		padding-bottom: 34px;
-		@screen md {
-			padding: 0 15px 34px;
-			@apply w-1/2;
-		}
-		@screen xl {
-			@apply w-1/3;
-		}
-		&:hover {
-			.post-loop-thumbnail {
-				transform: scale3d(1, 1, 1);
-			}
-		}
-		.post-loop-thumbnail {
-			@apply .relative w-full;
-			padding-bottom: 57.1428571429%;
-			> a {
-				@apply block .w-full .h-full .absolute;
-				left: 0;
-				top: 0;
-			}
-		}
-		.post-link {
-			@apply .relative .opacity-100 .block .bg-transparent text-left h-auto;
-			h2 {
-				@apply p-0 text-left text-lg text-black .font-normal .normal-case;
-				transition: color 400ms;
-				line-height: 1.666667;
-				margin-top: 18px;
-				@screen lg {
-					&:hover {
-						@apply .text-primary;
-					}
-				}
-			}
-			.date {
-				@apply text-grey text-sm .leading-tiny text-left;
-				margin-top: 8px;
-			}
-		}
-	}
+  max-width: 1170px;
+  .loop-row {
+    @apply w-full block;
+    padding-bottom: 34px;
+    @screen md {
+      padding: 0 15px 34px;
+      @apply w-1/2;
+    }
+    @screen xl {
+      @apply w-1/3;
+    }
+    &:hover {
+      .post-loop-thumbnail {
+        transform: scale3d(1, 1, 1);
+      }
+    }
+    .post-loop-thumbnail {
+      @apply .relative w-full;
+      padding-bottom: 57.1428571429%;
+      > a {
+        @apply block .w-full .h-full .absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+    .post-link {
+      @apply .relative .opacity-100 .block .bg-transparent text-left h-auto;
+      h2 {
+        @apply p-0 text-left text-lg text-black .font-normal .normal-case;
+        transition: color 400ms;
+        line-height: 1.666667;
+        margin-top: 18px;
+        @screen lg {
+          &:hover {
+            @apply .text-primary;
+          }
+        }
+      }
+      .date {
+        @apply text-grey text-sm .leading-tiny text-left;
+        margin-top: 8px;
+      }
+    }
+  }
 }

@@ -75,3 +75,7 @@ ul.menu {
 		background-color: rgba(0, 0, 0, .5);
 	}
 }
+
+.site-content {
+	@apply .overflow-x-hidden;
+}
