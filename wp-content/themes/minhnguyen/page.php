@@ -17,16 +17,23 @@ get_header();
 
 	<?php get_template_part( 'template-parts/partials/page', 'header' ); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main container">
+	<div id="primary" class="content-area single-page">
+		<main id="main" class="site-main">
 
 		<?php
 		while ( have_posts() ) :
+
 			the_post();
 
-			get_template_part( 'template-parts/content', 'page' );
+			if ( get_field( 'use_page_blocks_layout' ) ) {
 
-			get_template_part( 'template-parts/page', 'blocks' );
+				get_template_part( 'template-parts/page', 'blocks' );
+
+			} else {
+
+				get_template_part( 'template-parts/content', 'page' );
+
+			}
 
 		endwhile; // End of the loop.
 		?>

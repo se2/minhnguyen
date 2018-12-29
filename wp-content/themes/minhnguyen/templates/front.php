@@ -16,8 +16,6 @@ while ( have_posts() ) :
 
 <main id="main-content" role="main" class="main-content">
 
-	<?php get_template_part( 'template-parts/partials/home-slider' ); ?>
-
 	<?php get_template_part( 'template-parts/page', 'blocks' ); ?>
 
 </main>

@@ -1,0 +1,20 @@
+.page-block--icons-list {
+	@apply pt-60;
+	.container {
+		max-width: 965px;
+	}
+  .subtitle {
+    max-width: 540px;
+    margin-bottom: 56px;
+    margin-top: 16px;
+  }
+  .icon-heading {
+    h3 {
+      line-height: 1.1666666667;
+    }
+    img {
+      @apply mr-20;
+      max-width: 36px;
+    }
+  }
+}

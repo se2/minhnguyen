@@ -1,3 +1,4 @@
+.page article,
 .single article {
   @apply pb-60;
   @screen lg {
@@ -100,4 +101,9 @@
 			}
 		}
 	}
+}
+
+// Single Page
+.single-page {
+
 }

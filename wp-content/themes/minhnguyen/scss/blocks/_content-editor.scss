@@ -1,0 +1,11 @@
+.page-block--editor {
+	p {
+		@apply .leading-xl;
+	}
+	.block-title {
+		@apply .leading-loose;
+		@screen lg {
+			line-height: 3;
+		}
+	}
+}
