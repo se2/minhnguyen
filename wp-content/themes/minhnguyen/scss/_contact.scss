@@ -12,20 +12,26 @@
     }
   }
   .container {
-		&:not(.contact-sidebar__wrapper) {
-			@apply .pt-60;
-		}
+		@apply .pt-60;
     @screen lg {
       padding-top: 90px;
-    }
+		}
+		&.contact-sidebar__wrapper {
+			@media screen and (max-width: 768px) {
+				@apply pt-0;
+			}
+		}
   }
-  .contact-info {
-		@apply pb-60;
+  .info-wrapper {
+		@apply pb-60 ml-0;
     @screen lg {
 			max-width: 580px;
 			width: calc(100% - 485px);
-      padding-bottom: 92px;
-    }
+			padding-bottom: 92px;
+		}
+		@screen xl {
+			margin-left: calc((100% - 1110px) / 2);
+		}
   }
   .contact-sidebar {
 		@apply p-30 .bg-white;

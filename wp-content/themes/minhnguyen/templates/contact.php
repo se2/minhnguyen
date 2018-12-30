@@ -16,7 +16,7 @@ while ( have_posts() ) :
 
 <main id="main-content" role="main" class="main-content contact-page relative">
 
-	<div class="wrapper container w-full flex flex-wrap relative z-top">
+	<div class="info-wrapper container w-full flex flex-wrap relative z-top">
 
 		<div class="contact-info w-full">
 			<h1 class="text-44px font-normal "><?php the_title(); ?></h1>
