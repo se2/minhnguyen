@@ -82,3 +82,20 @@ function set_posts_per_page_for_work_cpt( $query ) {
 }
 
 add_action( 'pre_get_posts', 'set_posts_per_page_for_work_cpt' );
+
+/**
+ * Update Google Maps API key for ACF
+ */
+function my_acf_init() {
+	acf_update_setting('google_api_key', 'AIzaSyCJ6QXR6UlBS2h0i9vjjgiQ72RkYDD4UWs');
+}
+
+add_action('acf/init', 'my_acf_init');
+
+add_filter( 'gform_field_content', function( $field_content, $field ) {
+	// Append to frontend only
+	if ( ! IS_ADMIN ) {
+		$field_content = str_replace( '</div>', '<label>' . $field->label . '</label><span class="bar"></span></div">', $field_content );
+	}
+	return $field_content;
+}, 10, 5 );

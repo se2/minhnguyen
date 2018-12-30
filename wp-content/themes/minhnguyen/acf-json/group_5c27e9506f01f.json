@@ -1,0 +1,43 @@
+{
+    "key": "group_5c27e9506f01f",
+    "title": "Sidebar Form",
+    "fields": [
+        {
+            "key": "field_5c27e95b0443c",
+            "label": "Gravity Form Shortcode",
+            "name": "gravity_form_shortcode",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "[gravityform id=\"1\" title=\"true\" description=\"false\" ajax=\"true\"]",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates\/contact.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1546119566
+}

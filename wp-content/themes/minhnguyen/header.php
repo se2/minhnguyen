@@ -20,6 +20,9 @@
 	<!-- FontAwesome 5.6.3 -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
+	<!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
 	<!-- Roboto -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&amp;subset=latin-ext,vietnamese" rel="stylesheet">
 

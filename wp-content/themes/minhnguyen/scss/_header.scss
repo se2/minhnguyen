@@ -176,7 +176,7 @@ $offcanvas: 250px;
 }
 
 #mobile-menu {
-  @apply .bg-white .absolute .h-screen px-20 py-10;
+  @apply .bg-black .absolute .h-screen px-20 py-10;
   width: $offcanvas;
   top: 0;
   right: -#{$offcanvas};
@@ -184,7 +184,7 @@ $offcanvas: 250px;
     li {
       @apply block;
       a {
-        @apply text-black;
+        @apply text-white;
         line-height: 3;
       }
     }

@@ -1,0 +1,178 @@
+.contact-page {
+  p {
+    @apply leading-xl text-grey mt-10;
+		@screen md {
+			margin-top: 24px;
+		}
+    &.text-black {
+      @apply .text-black;
+    }
+    &.text-primary {
+      @apply .text-primary;
+    }
+  }
+  .container {
+		&:not(.contact-sidebar__wrapper) {
+			@apply .pt-60;
+		}
+    @screen lg {
+      padding-top: 90px;
+    }
+  }
+  .contact-info {
+		@apply pb-60;
+    @screen lg {
+			max-width: 580px;
+			width: calc(100% - 485px);
+      padding-bottom: 92px;
+    }
+  }
+  .contact-sidebar {
+		@apply p-30 .bg-white;
+		max-width: 100%;
+    animation-delay: 500ms;
+    width: 445px;
+		box-shadow: 0 10px 24px 0 rgba(0, 0, 0, 0.08);
+		&__wrapper {
+			top: 0;
+			left: 0;
+			right: 0;
+		}
+  }
+}
+
+// Gravity Forms styling
+body {
+  .gform_wrapper {
+    img.gform_ajax_spinner {
+      @apply .absolute .ml-10;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .top_label label.gfield_label,
+    .validation_error {
+      @apply .hidden;
+    }
+    .validation_message {
+      @apply text-sm mt-10 .absolute;
+      color: red;
+      label,
+      span {
+        display: none !important;
+      }
+    }
+    h3.gform_title {
+      @apply text-32px text-center m-0 .leading-tighter;
+    }
+    ul.gform_fields {
+      @apply p-0 .list-reset;
+      li.gfield {
+        @apply pr-0 mt-30 .relative;
+        &.gfield_error {
+          @apply mb-60;
+        }
+      }
+    }
+    form {
+      .top_label div.ginput_container {
+        @apply mt-0;
+      }
+      textarea,
+      input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]) {
+        @apply text-sm .leading-tiny .outline-none w-full .relative p-0 m-0;
+        padding-bottom: 14px;
+        border-bottom: 1px solid #acacac;
+        /* active state */
+        &:focus {
+          & ~ .bar:before,
+          & ~ .bar:after {
+            width: 50%;
+          }
+        }
+        &:focus {
+          & ~ label {
+            top: -20px;
+            font-size: 11px;
+          }
+        }
+        &::-webkit-input-placeholder {
+          /* Chrome/Opera/Safari */
+          color: #acacac;
+        }
+        &::-moz-placeholder {
+          /* Firefox 19+ */
+          color: #acacac;
+        }
+        &:-ms-input-placeholder {
+          /* IE 10+ */
+          color: #acacac;
+        }
+        &:-moz-placeholder {
+          /* Firefox 18- */
+          color: #acacac;
+        }
+      }
+      textarea.medium {
+        @apply .resize-none;
+        height: 60px;
+      }
+    }
+    .ginput_container {
+      @apply .relative;
+      &.ginput_container_textarea {
+        height: 60px;
+      }
+      label {
+        @apply text-sm .font-normal .absolute z-10 block .pointer-events-none;
+        transition: 0.2s ease all;
+        -moz-transition: 0.2s ease all;
+        -webkit-transition: 0.2s ease all;
+        left: 0;
+        top: 0;
+        color: #acacac;
+        &.active {
+          top: -20px;
+          font-size: 11px;
+        }
+      }
+      .bar {
+        @apply .absolute .block .w-full z-10;
+        bottom: -1px;
+        left: 0;
+        height: 2px;
+        &:before,
+        &:after {
+          content: "";
+          @apply .absolute;
+          background: #202124;
+          height: 2px;
+          width: 0;
+          bottom: 1px;
+          transition: 0.2s ease all;
+          -moz-transition: 0.2s ease all;
+          -webkit-transition: 0.2s ease all;
+        }
+        &:before {
+          left: 50%;
+        }
+        &:after {
+          right: 50%;
+        }
+      }
+    }
+    .gform_footer {
+      @apply p-0 text-center mt-30 .relative;
+      input[type="submit"] {
+        @apply mr-0 .outline-none .cursor-pointer;
+      }
+    }
+	}
+	.gform_confirmation_message {
+		@apply .text-center .leading-xl;
+	}
+}
+
+#map {
+	@apply w-full;
+	height: 400px;
+}

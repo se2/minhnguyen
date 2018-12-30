@@ -1,5 +1,39 @@
 // JQuery's Document Ready Function
 ($ => {
+  // Resolve Gravity Forms ajax after form render not recognizing JS code
+  // @link https://stackoverflow.com/questions/29921438/jquery-callback-after-gravity-form-submit
+  $(document).on("gform_post_render", function(event, formId) {
+    // Workaround for <label> conditional position
+    var inputs = [".ginput_container input", ".ginput_container textarea"];
+    for (let i = 0; i < inputs.length; i++) {
+      $(inputs[i]).each(function() {
+        if ($(this).val() == "") {
+          $(this)
+            .parent()
+            .find("label")
+            .removeClass("active");
+        } else {
+          $(this)
+            .parent()
+            .find("label")
+            .addClass("active");
+        }
+      });
+      $(inputs[i]).focusout(function() {
+        if ($(this).val() == "") {
+          $(this)
+            .parent()
+            .find("label")
+            .removeClass("active");
+        } else {
+          $(this)
+            .parent()
+            .find("label")
+            .addClass("active");
+        }
+      });
+    }
+  });
   $(document).ready(function() {
     // Init smoothscroll for internal links
     var scroll = new SmoothScroll('a[href*="#"]', {

@@ -1241,6 +1241,11 @@
                 "param": "page_type",
                 "operator": "!=",
                 "value": "posts_page"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "templates\/contact.php"
             }
         ]
     ],
@@ -1260,5 +1265,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1546054919
+    "modified": 1546117350
 }

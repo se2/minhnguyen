@@ -2,6 +2,9 @@
 	p {
 		@apply .leading-xl;
 	}
+	.container {
+		max-width: 920px;
+	}
 	.block-title {
 		@apply .leading-loose;
 		@screen lg {

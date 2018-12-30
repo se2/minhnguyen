@@ -15,8 +15,6 @@
 get_header();
 ?>
 
-	<?php get_template_part( 'template-parts/partials/page', 'header' ); ?>
-
 	<div id="primary" class="content-area single-page">
 		<main id="main" class="site-main">
 
@@ -40,8 +38,6 @@ get_header();
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
-	<?php get_template_part( 'template-parts/partials/page', 'footer' ); ?>
 
 <?php
 get_footer();

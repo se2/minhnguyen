@@ -2,7 +2,10 @@
   @apply py-30;
   @screen lg {
     @apply .py-60;
-  }
+	}
+	.container {
+		max-width: 1140px;
+	}
   .center-slider {
     @apply .opacity-0 .invisible;
     transition: opacity 400ms;

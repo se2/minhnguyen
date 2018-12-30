@@ -98,7 +98,8 @@
       }
     }
     .post-loop-thumbnail {
-      @apply .relative w-full;
+			@apply .relative w-full;
+			height: 0;
       padding-bottom: 57.1428571429%;
       > a {
         @apply block .w-full .h-full .absolute;
