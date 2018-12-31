@@ -64,11 +64,6 @@
 	.post-header {
 		max-width: 770px;
 	}
-	.back-to-blog {
-		img {
-			width: 13px;
-		}
-	}
 	.post-content {
 		p {
 			@apply .mx-auto;
@@ -93,11 +88,15 @@
 	.post-next {
 		@apply py-10;
 		min-height: 150px;
-	}
-	.post-next {
-		.back-to-blog {
-			img {
-				transform: rotate(180deg);
+		a {
+			@screen lg {
+				&:hover {
+					i,
+					span {
+						@apply .text-primary;
+						transition: color 500ms;
+					}
+				}
 			}
 		}
 	}

@@ -14,7 +14,7 @@ get_header();
 		<h1 class="blog-title uppercase text-primary tracking-wide text-center text-4xl leading-none">
 			<?php
 			/* translators: %s: search query. */
-			printf( esc_html__( 'Search Results for: %s', 'ttg-wp' ), '<span>' . get_search_query() . '</span>' );
+			printf( __( 'Kết quả tìm kiếm: <i>"%s"</i>', 'minhnguyen' ), '<span>' . get_search_query() . '</span>' );
 			?>
 		</h1>
 	</div>

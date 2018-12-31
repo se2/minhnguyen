@@ -21,12 +21,12 @@ while ( have_posts() ) :
 		<div class="contact-info w-full">
 			<h1 class="text-44px font-normal "><?php the_title(); ?></h1>
 			<?php the_content(); ?>
-			<div class="flex flex-wrap info-box mt-40">
-				<div class="address w-full md:w-1/2 xl:flex-1">
+			<div class="flex flex-wrap info-box mt-40 justify-start">
+				<div class="address w-full md:w-1/2 xl:w-auto">
 					<label class="text-primary uppercase font-normal text-sm leading-normal tracking-x-wide">Địa chỉ</label>
 					<p class="leading-xl text-black"><?php the_field( 'address', 'option' ); ?></p>
 				</div>
-				<div class="phone w-full md:w-1/2 xl:flex-1 md:pl-30 mt-30 md:mt-0">
+				<div class="phone w-full md:w-1/2 xl:w-auto md:pl-30 mt-30 md:mt-0">
 					<label class="text-primary uppercase font-normal text-sm leading-normal tracking-x-wide">Điện thoại</label>
 					<?php if ( have_rows( 'phone', 'option' ) ) : ?>
 						<p class="leading-xl text-black">
@@ -36,7 +36,7 @@ while ( have_posts() ) :
 						</p>
 					<?php endif; ?>
 				</div>
-				<div class="email w-full md:w-1/2 xl:flex-1 xl:pl-30 mt-30 md:mt-40 xl:mt-0">
+				<div class="email w-full md:w-1/2 xl:w-auto xl:pl-30 mt-30 md:mt-40 xl:mt-0">
 					<label class="text-primary uppercase font-normal text-sm leading-normal tracking-x-wide">Email</label>
 					<?php if ( have_rows( 'email_addresses', 'option' ) ) : ?>
 						<p class="leading-xl text-black">
@@ -58,8 +58,8 @@ while ( have_posts() ) :
 	</div>
 
 	<div class="wrapper container w-full flex flex-wrap justify-end contact-sidebar__wrapper z-50 lg:absolute pb-40 lg:pb-0">
-
-		<div class="contact-sidebar w-full animated fadeIn mx-auto lg:mx-0">
+		<a id="gf_1" class="gform_anchor"></a>
+		<div class="contact-sidebar w-full animated fadeIn mx-auto lg:mx-0" id="contact-sidebar">
 			<div class="inner">
 				<?php echo do_shortcode( get_field( 'gravity_form_shortcode' ) ); ?>
 			</div>

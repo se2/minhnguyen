@@ -92,6 +92,9 @@ function my_acf_init() {
 
 add_action('acf/init', 'my_acf_init');
 
+/**
+ * Update Gravity Forms HTML markup
+ */
 add_filter( 'gform_field_content', function( $field_content, $field ) {
 	// Append to frontend only
 	if ( ! IS_ADMIN ) {

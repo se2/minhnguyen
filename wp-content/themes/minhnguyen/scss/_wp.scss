@@ -42,10 +42,9 @@ a img.aligncenter {
 
 .wp-caption {
   background: #fff;
-  border: 1px solid #f0f0f0;
   max-width: 96%; /* Image does not overflow the content area */
   padding: 5px 3px 10px;
-  text-align: center;
+  text-align: left;
 }
 
 .wp-caption.alignnone {

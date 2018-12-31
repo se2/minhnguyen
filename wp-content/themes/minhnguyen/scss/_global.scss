@@ -45,6 +45,15 @@ ul.menu {
   }
 }
 
+.post-container {
+  @apply .relative w-full px-20 .overflow-y-auto .overflow-x-hidden;
+  margin: 0 auto;
+  max-width: 730px;
+  @screen md {
+    @apply .px-0;
+  }
+}
+
 .page-block {
   .block-title {
     line-height: 1.333333;
@@ -57,9 +66,9 @@ ul.menu {
 
 .slick-dots {
   li {
-		@apply .w-auto .h-auto;
+    @apply .w-auto .h-auto;
     button {
-			@apply p-0 .rounded-full;
+      @apply p-0 .rounded-full;
       &::before {
         content: none;
       }
@@ -68,14 +77,14 @@ ul.menu {
 }
 
 .dark-overlay {
-	@apply .relative;
-	&::before {
-		content: "";
-		@apply .absolute .w-full .h-full z-10;
-		background-color: rgba(0, 0, 0, .5);
-	}
+  @apply .relative;
+  &::before {
+    content: "";
+    @apply .absolute .w-full .h-full z-10;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 }
 
 .site-content {
-	@apply .overflow-x-hidden;
+  @apply .overflow-x-hidden;
 }

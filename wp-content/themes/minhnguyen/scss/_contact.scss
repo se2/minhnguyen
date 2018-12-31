@@ -47,6 +47,16 @@
   }
 }
 
+.contact-info {
+	.address,
+	.phone,
+	.email {
+		@screen xl {
+			max-width: 33.333333%;
+		}
+	}
+}
+
 // Gravity Forms styling
 body {
   .gform_wrapper {
