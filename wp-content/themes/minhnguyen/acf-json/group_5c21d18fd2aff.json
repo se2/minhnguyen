@@ -4,9 +4,9 @@
     "fields": [
         {
             "key": "field_5c21d1badfd7d",
-            "label": "Testimonial Title",
+            "label": "Title",
             "name": "testimonial_title",
-            "type": "textarea",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -17,15 +17,15 @@
             },
             "default_value": "",
             "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": ""
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_5c21d1c7dfd7e",
-            "label": "Testimonial Media",
-            "name": "testimonial_media",
-            "type": "file",
+            "label": "Media Type",
+            "name": "testimonial_media_type",
+            "type": "radio",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -34,9 +34,106 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "url",
+            "choices": {
+                "gallery": "Gallery Images",
+                "video": "YouTube\/Vimeo Video"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5c2bb4921fe6a",
+            "label": "Gallery",
+            "name": "testimonial_gallery",
+            "type": "gallery",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c21d1c7dfd7e",
+                        "operator": "==",
+                        "value": "gallery"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": "",
+            "max": "",
+            "insert": "append",
             "library": "all",
+            "min_width": "",
+            "min_height": "",
             "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5c2bb5f11fe6b",
+            "label": "Embed Video Link",
+            "name": "embed_video_link",
+            "type": "text",
+            "instructions": "Support YouTube and Vimeo <br>\r\nYouTube format: https:\/\/www.youtube.com\/watch?v=[VIDEO_ID] <br>\r\nVimeo format : https:\/\/vimeo.com\/[VIDEO_ID]",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c21d1c7dfd7e",
+                        "operator": "==",
+                        "value": "video"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5c2bb66a1fe6c",
+            "label": "Video Thumbnail",
+            "name": "video_thumbnail",
+            "type": "image",
+            "instructions": "If not set, the thumbnail will be pulled from YouTube\/Vimeo",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c21d1c7dfd7e",
+                        "operator": "==",
+                        "value": "video"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
             "max_size": "",
             "mime_types": ""
         }
@@ -58,5 +155,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1545720482
+    "modified": 1546375498
 }

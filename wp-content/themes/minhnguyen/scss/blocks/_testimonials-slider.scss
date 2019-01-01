@@ -94,6 +94,10 @@
     .play {
       width: 64px;
       height: 64px;
+      &:focus,
+      &:active {
+        @apply outline-none;
+      }
     }
     @screen md {
       min-height: 357px;
@@ -105,4 +109,64 @@
       }
     }
   }
+}
+
+/*
+====== Zoom effect ======
+*/
+.mfp-zoom-in {
+  /* start state */
+  .mfp-with-anim {
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    transform: scale(0.8);
+  }
+
+  &.mfp-bg {
+    opacity: 0;
+    transition: all 0.3s ease-out;
+  }
+
+  /* animate in */
+  &.mfp-ready {
+    .mfp-with-anim {
+      opacity: 1;
+      transform: scale(1);
+    }
+    &.mfp-bg {
+      opacity: 0.8;
+    }
+  }
+
+  /* animate out */
+  &.mfp-removing {
+    .mfp-with-anim {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    &.mfp-bg {
+      opacity: 0;
+    }
+  }
+}
+
+.mfp-iframe-scaler {
+	@apply .overflow-visible;
+}
+
+.mfp-iframe-holder .mfp-close {
+  @apply .outline-none;
+}
+
+.mfp-iframe-holder .mfp-content {
+  max-width: 1110px;
+}
+
+.mfp-iframe-holder .mfp-close {
+  top: -50px;
+  font-size: 50px;
+}
+
+.mfp-title {
+	@apply .hidden;
 }

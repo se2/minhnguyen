@@ -17,11 +17,15 @@ p {
 }
 
 a {
-  @apply .no-underline;
+  @apply .no-underline .outline-none;
   transition: color 400ms;
   &:hover {
     @apply .text-primary;
-  }
+	}
+	&:active,
+	&:focus {
+		@apply .outline-none;
+	}
 }
 
 ul.menu {

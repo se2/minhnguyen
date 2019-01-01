@@ -12,6 +12,10 @@ function ttg_wp_scripts() {
 	wp_enqueue_style( 'lightbox2', get_template_directory_uri() . '/js/lightbox2/dist/css/lightbox.min.css' );
 	wp_enqueue_script( 'lightbox2', get_template_directory_uri() . '/js/lightbox2/dist/js/lightbox.min.js', ['jquery'] );
 
+	// Magnific Popup
+	wp_enqueue_style( 'magnificpopup', get_template_directory_uri() . '/js/magnificpopup/magnific-popup.css' );
+	wp_enqueue_script( 'magnificpopup', get_template_directory_uri() . '/js/magnificpopup/jquery.magnific-popup.min.js', ['jquery'] );
+
 	// Smooth Scroll
 	wp_enqueue_script( 'smoothscroll', 'https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14/dist/smooth-scroll.polyfills.min.js', ['jquery'] );
 

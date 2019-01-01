@@ -64,7 +64,7 @@
       }
     });
 
-    // Full-width slider
+    // Testimonials slider
     $(".testimonials-slider").each(function() {
       if (!$(this).hasClass("slick-initialized")) {
         $(this).slick({
@@ -77,7 +77,8 @@
           autoplaySpeed: 8000,
           fade: true,
           cssEase: "ease",
-          adaptiveHeight: true
+					adaptiveHeight: true,
+					pauseOnHover: true,
         });
       }
     });

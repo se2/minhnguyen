@@ -236,3 +236,29 @@ function sanitize_title_with_underscore( $title ) {
 	$text_to_transform = sanitize_title_with_dashes( $title );
 	return str_replace( '-', '_', $text_to_transform );
 }
+
+/**
+ * Retrieves the thumbnail from a youtube or vimeo video
+ * @param - $src: the url of the "player"
+ * @return - string
+ * @todo - do some real world testing.
+ *
+**/
+function get_video_thumbnail( $src ) {
+	// If Vimeo
+	if ( strpos( $src, 'vimeo' ) !== false ) {
+		$url_pieces = explode( '/', $src );
+		$ch = curl_init( 'https://vimeo.com/api/v2/video/' . $url_pieces[ count( $url_pieces ) - 1 ] . '.php' );
+		curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1 );
+		curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, 1 );
+		$a         = curl_exec( $ch );
+		$hash      = unserialize( $a );
+		$thumbnail = $hash[0]["thumbnail_large"];
+	} elseif ( strpos( $src, 'youtube' ) !== false ) {
+		// If Youtube
+		$extract_id = explode( '=', $src );
+		$id         = $extract_id[1];
+		$thumbnail  = 'http://img.youtube.com/vi/' . $id . '/hqdefault.jpg';
+	}
+	return $thumbnail;
+}
