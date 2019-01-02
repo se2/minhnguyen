@@ -97,7 +97,6 @@ $slider_id    = uniqid( 'testimonials-slider-' . get_the_ID() . '-' );
 				this.st.mainClass = this.st.el.attr('data-effect');
 			},
 			close: function() {
-				$("#" + this.st.el.attr('data-slider')).slick('reinit');
 				$("#" + this.st.el.attr('data-slider')).slick("slickPlay").slick('setOption', 'autoplay', true).slick('setOption', 'autoplaySpeed', 4000);
 			}
 		},
