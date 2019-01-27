@@ -21,15 +21,15 @@ $image = get_sub_field( 'left_image' );
 			<p class="subtitle text-sm text-grey leading-xl mx-auto"><?php the_sub_field( 'subtitle' ); ?></p>
 		</div>
 		<?php if ( $image ) : ?>
-		<div class="w-full lg:w-3/5 text-center lg:text-left lg:pr-60 mb-40 lg:mb-0">
-			<img class="w-full lg:w-auto" src="<?php echo esc_url( $image ); ?>" alt="<?php echo wp_strip_all_tags( get_sub_field( 'title' ) ); ?>">
+		<div class="w-full text-center lg:text-left pb-20 lg:pb-40 mb-40 lg:mb-0">
+			<img class="w-full" src="<?php echo esc_url( $image ); ?>" alt="<?php echo wp_strip_all_tags( get_sub_field( 'title' ) ); ?>">
 		</div>
 		<?php endif; ?>
-		<div class="w-full <?php echo $image ? 'lg:w-2/5' : ''; ?> lg:mt-20">
-			<div class="icons-list lg:pr-20">
+		<div class="w-full lg:mt-20">
+			<div class="icons-list flex flex-wrap">
 				<?php foreach ( $icons as $key => $icon ) : ?>
-				<div class="icon-item mb-50">
-					<div class="icon-heading flex flex-wrap items-start">
+				<div class="icon-item w-full lg:flex-1 text-center px-15 pb-40 lg:pb-0">
+					<div class="icon-heading flex flex-wrap items-center justify-center">
 						<img src="<?php echo $icon['icon']; ?>" alt="<?php echo $icon['label']; ?>">
 						<h3 class="text-2xl"><?php echo $icon['label']; ?></h3>
 					</div>

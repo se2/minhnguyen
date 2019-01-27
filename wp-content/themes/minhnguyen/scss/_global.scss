@@ -21,11 +21,11 @@ a {
   transition: color 400ms;
   &:hover {
     @apply .text-primary;
-	}
-	&:active,
-	&:focus {
-		@apply .outline-none;
-	}
+  }
+  &:active,
+  &:focus {
+    @apply .outline-none;
+  }
 }
 
 ul.menu {
