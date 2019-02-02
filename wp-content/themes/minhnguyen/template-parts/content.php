@@ -74,9 +74,15 @@ $images   = get_field( 'work_gallery' );
 		<?php if ( $images ) : ?>
 		<div class="work-gallery w-full">
 			<?php foreach ( $images as $key => $image ) : ?>
-			<a href="<?php echo esc_url( $image['url'] ); ?>" data-lightbox="gallery-<?php the_ID(); ?>" class="block w-full overflow-hidden <?php echo ( $key < count( $images ) - 1 ) ? 'mb-40' : ''; ?>" data-title="<?php the_title(); ?>">
-				<img src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php the_title(); ?>" class="w-full">
+			<a href="<?php echo esc_url( $image['url'] ); ?>" data-lightbox="gallery-<?php the_ID(); ?>" class="block w-full text-center overflow-hidden" data-title="<?php echo ( $image['caption'] ) ? $image['caption'] : get_the_title(); ?>">
+				<img src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo ( $image['alt'] ) ? $image['alt'] : get_the_title(); ?>" class="w-auto">
 			</a>
+			<p class="caption text-primary lg:px-20 pt-10">
+				<?php echo $image['caption']; ?>
+			</p>
+			<p class="description lg:px-20 <?php echo ( $key < count( $images ) - 1 ) ? 'mb-40' : ''; ?>">
+				<?php echo $image['description']; ?>
+			</p>
 			<?php endforeach; ?>
 		</div>
 		<?php endif; ?>
