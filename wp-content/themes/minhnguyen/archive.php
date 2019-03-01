@@ -14,7 +14,7 @@ $post_types = array( 'work', 'project' );
 
 	<?php if ( !is_post_type_archive( $post_types ) ) : ?>
 	<div class="w-full overflow-auto">
-		<h1 class="blog-title uppercase text-primary tracking-wide text-center text-4xl leading-none">
+		<h1 class="blog-title uppercase text-primary tracking-wide text-center text-4xl leading-loose">
 			<?php the_archive_title(); ?>
 		</h1>
 	</div>

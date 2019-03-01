@@ -127,3 +127,11 @@
     }
   }
 }
+
+.archive {
+	&.tax-project_cat {
+		.container {
+			max-width: 100vw;
+		}
+	}
+}

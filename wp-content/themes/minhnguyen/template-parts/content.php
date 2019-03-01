@@ -75,7 +75,7 @@ $images   = get_field( 'work_gallery' );
 		<div class="work-gallery w-full">
 			<?php foreach ( $images as $key => $image ) : ?>
 			<a href="<?php echo esc_url( $image['url'] ); ?>" data-lightbox="gallery-<?php the_ID(); ?>" class="block w-full text-center overflow-hidden" data-title="<?php echo ( $image['caption'] ) ? $image['caption'] : get_the_title(); ?>">
-				<img src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo ( $image['alt'] ) ? $image['alt'] : get_the_title(); ?>" class="w-auto">
+				<img src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo ( $image['alt'] ) ? $image['alt'] : get_the_title(); ?>" class="<?php echo ( $image['width'] < $image['height'] ) ? 'w-auto' : 'w-full'; ?>">
 			</a>
 			<p class="caption text-primary lg:px-20 pt-10">
 				<?php echo $image['caption']; ?>

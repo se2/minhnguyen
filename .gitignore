@@ -27,6 +27,7 @@ wp-content/themes/twentysixteen
 wp-content/plugins/akismet
 wp-content/themes/minhnguyen/node_modules
 wp-content/themes/minhnguyen/dist
+wp-content/plugins/fakerpress
 
 # wpengine specific
 # Make tripple sure we're ignoring WPE Plugins
